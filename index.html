@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificação</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="root">
+    <main>
+        <form>
+            <label for="frase">Digite a mensagem:</label>
+            <input type="text" id="frase">
+
+            <input type="checkbox" id="cifra" name="escolha">
+            <label for="cifra">Cifra de Cesar</label>
+            <input type="checkbox" id="base" name="escolha">
+            <label for="base">Base 65</label>
+
+            <div id="incrementado"></div>
+
+            <input type="radio" id="cod" name="codificar">
+            <label for="cod">Codificar</label>
+            <input type="radio" id="decode" name="decodificar">
+            <label for="cod">Decodificar</label>
+
+            <input type="button" value="Iniciar">
+
+            <div id="codificado"></div>
+        </form>
+    </main>
+    <script src="/codigo.js"></script>
+</body>
+</html>
