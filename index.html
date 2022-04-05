@@ -8,28 +8,32 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body id="root">
+    <header>
+
+    </header>
     <main>
-        <form>
-            <label for="frase">Digite a mensagem:</label>
-            <input type="text" id="frase">
+            <form id="container" >
+                <div class="input">
+                    <input type="text" class="textoCript"></input>
+                    <input type="number" class="shift">
+                    <input type="text" class="textDecrypto"></input><br>
+                </div>
 
-            <input type="checkbox" id="cifra" name="escolha">
-            <label for="cifra">Cifra de Cesar</label>
-            <input type="checkbox" id="base" name="escolha">
-            <label for="base">Base 65</label>
-
-            <div id="incrementado"></div>
-
-            <input type="radio" id="cod" name="codificar">
-            <label for="cod">Codificar</label>
-            <input type="radio" id="decode" name="decodificar">
-            <label for="cod">Decodificar</label>
-
-            <input type="button" value="Iniciar">
-
-            <div id="codificado"></div>
-        </form>
+                <div class="buttons">
+                    <input type="radio" onclick="criptografar()" value="Codificar" class="cryptButton">
+                    <label for="cryptButton">Codificar</label>
+                    <input type="radio" onclick="decrypt()" value="Decodificar" class="cryptButton">
+                    <label for="cryptButton">Decodificar</label>
+                </div>
+                    
+                <div class="checkbox">
+                        <input type="checkbox" id="cifra" name="modelo">
+                        <label for="cifra">CifraCesar</label>
+                        <input type="checkbox" id="base64" name="modelo">
+                        <label for="base64">Base64</label>
+                </div>
+            </form>
     </main>
-    <script src="/codigo.js"></script>
+    <script src="/cifra.js"></script>
 </body>
 </html>
