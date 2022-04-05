@@ -60,7 +60,7 @@ header{
     width: 90%;
 }
 
-.textInput{
+#textInput{
     height: 250px;
     width: 350px;
     border-radius: 7px;
@@ -74,9 +74,9 @@ header{
 
 .shift{
     height: 20px;
-    width: 60px;
+    width: 70px;
 }
 
-.cryptButton{
-    background-color: #040403;
+.submitBtn{
+    background-color: #313129;
 }

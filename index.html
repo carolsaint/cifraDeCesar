@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificação</title>
+    <title>Crypt</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body id="root">
@@ -14,11 +14,11 @@
     <main>
             <form id="container" >
                 <div class="input">
-                    <input type="text" class="textInput"></input>
+                    <input type="text" id="textInput"></input>
                     <input type="number" class="shift"></input>
                     
-                <div class="textOutput">
-                        <textarea name="encoded-text" class="encoded-text"></textarea>
+                <div class="output">
+                        <textarea name="output" class="textOutput"></textarea>
                 </div>
 
                 </div>
@@ -29,15 +29,16 @@
                     <input type="radio" value="Decodificar" class="decryptButton">
                     <label for="cryptButton">Decodificar</label>
                 </div>
-                    
-                <div class="checkbox">
-                        <input type="checkbox" id="cifra" name="modelo">
-                        <label for="cifra">CifraCesar</label>
-                        <input type="checkbox" id="base64" name="modelo">
-                        <label for="base64">Base64</label>
+
+                <div class="options">
+                    <select>
+                        <option value="cifra">Cifra de Cesar</option>
+                        <option value="base64">Base 64</option>
+                    </select>
                 </div>
-                <div>
-                    <input type="submit"  value="Encode message" id="submitBtn">
+                    
+                <div class="enter">
+                    <input type="submit"  value="Encode message" class="submitBtn">
                 </div>
             </form>
     </main>
