@@ -9,20 +9,24 @@
 </head>
 <body id="root">
     <header>
-
+        <h1 class="title">Encrypter & Decoder</h1>
     </header>
     <main>
             <form id="container" >
                 <div class="input">
-                    <input type="text" class="textoCript"></input>
-                    <input type="number" class="shift">
-                    <input type="text" class="textDecrypto"></input><br>
+                    <input type="text" class="textInput"></input>
+                    <input type="number" class="shift"></input>
+                    
+                <div class="textOutput">
+                        <textarea name="encoded-text" class="encoded-text"></textarea>
+                </div>
+
                 </div>
 
                 <div class="buttons">
-                    <input type="radio" onclick="criptografar()" value="Codificar" class="cryptButton">
+                    <input type="radio" value="Codificar" class="cryptButton">
                     <label for="cryptButton">Codificar</label>
-                    <input type="radio" onclick="decrypt()" value="Decodificar" class="cryptButton">
+                    <input type="radio" value="Decodificar" class="decryptButton">
                     <label for="cryptButton">Decodificar</label>
                 </div>
                     
@@ -31,6 +35,9 @@
                         <label for="cifra">CifraCesar</label>
                         <input type="checkbox" id="base64" name="modelo">
                         <label for="base64">Base64</label>
+                </div>
+                <div>
+                    <input type="submit"  value="Encode message" id="submitBtn">
                 </div>
             </form>
     </main>

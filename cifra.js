@@ -1,41 +1,59 @@
-var texto = document.querySelector('.textoCript').value.toLowerCase().split('');
-var tamanhoFrase = texto.length;
-const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-
 function criptografar(){
+    var texto = document.querySelector('.textInput').value.toLowerCase();
+    var textoCriptografado = "";
+    var shift = document.querySelector('.shift').value;
     
-    for(var i = 0; i < texto .length; i++){
-        var letra = texto[i];
-        if (letra === " "){
-            texto = `${texto} `;
-        }else{
-            for(let j = 0; j < alphabet.length; j++){
-                if(texto[i] == alphabet[j]){
-                    if(shift > 26) if(shift > 52){
-                        var control = true;
-                        var contador = 1;
+    console.log(texto);
+    console.log(shift);
+    
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    
+    console.log(textoCriptografado);
 
-                        while(controle){
-                            var novoAlfabeto = new[];
-                            for(let j = 0; j < alphabet.length; j++){
-                                shift = shift + contador * 26
-                                novoaAlfabeto.set(shift)
-                            }
-                            if (novoAlfabeto.get(shift) != undefined){
-                                texto += novoAlfabeto[j + shift]
-                                control = false;
-                            } 
-
-                            contador += 1;
-                        }
-
-                    }else{
-                        // texto = `${texto}${alphabet.get(text + shift)}`;
-                        texto += alphabet[j + shift]
-                    }
-                }
-            }
-        }
+for (var i = 0; i < texto.length; i++) {
+    var letra = texto[i];
+    if (letra === " ") {
+      textoCriptografado += letra;
+    } else {
+      var indice = letra.charCodeAt() - 97 + shift;
+      if (indice > 25) {
+          var help = parseInt(indice / 26);
+        indice = indice - (help * 26);
+      }
+      textoCriptografado += alphabet[indice];
     }
+  }
+  console.log(textoCriptografado);
+
+  return textoCriptografado
 }
+
+
+var iniciar = document.querySelector("#submitBtn");
+var opt1 = document.querySelector('.cryptButton');
+var opt2 = document.querySelector('.decryptButton');
+var output = document.querySelector('.encoded-text')
+
+
+iniciar.addEventListener('click', function () {
+    if(opt1.checked == true){
+        var textoCriptografado = criptografar();
+        output.value = textoCriptografado;
+    }else if(opt2.checked == true){
+    
+    }
+});
+
+document.querySelector('#container').addEventListener('submit', function(event){
+    event.preventDefault();
+}) 
+
+
+
+
+
+
+
+// base64
+// btoa()
+// atob()

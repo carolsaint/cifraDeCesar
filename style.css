@@ -14,6 +14,12 @@
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    background-color: var(--surface);
+}
+
+@font-face {
+    font-family: vt;
+    src: url(VT323-Regular.ttf);
 }
 
 header{
@@ -21,34 +27,49 @@ header{
     width: 100%;
     height: 30%;
     background-color: #436436;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.title{
+    font-family: vt, monospace;
+    font-size: 60px;
 }
 
 #container{
     position: relative;
-    width: 100%;
-    height: auto;
+    width: 950px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #9CD18A;
+    background-color: #436436;
+    margin-top: 30px;
+    border-radius: 7px;
+    border:2px solid #253221;
 }
 
 .input{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 90%;
 }
 
-.textoCript{
+.textInput{
     height: 250px;
     width: 350px;
+    border-radius: 7px;
 }
 
-.textDecrypto{
+.textOutput{
     height: 250px;
     width: 350px;
+    border-radius: 7px;
 }
 
 .shift{
@@ -56,3 +77,6 @@ header{
     width: 60px;
 }
 
+.cryptButton{
+    background-color: #040403;
+}
