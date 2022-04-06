@@ -31,6 +31,8 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 7px;
+    background-image: url(/bg.jpg);
+    color: var(--original-text);
 }
 
 .title{
@@ -46,7 +48,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #436436;
+    background-color: #1a6c2d;
     margin-top: 30px;
     border-radius: 7px;
     border:2px solid #253221;
@@ -78,5 +80,5 @@ header{
 }
 
 .submitBtn{
-    background-color: #313129;
+    background-color: var(--original-text);
 }
