@@ -24,16 +24,16 @@
                 </div>
 
                 <div class="buttons">
-                    <input type="radio" value="Codificar" class="cryptButton">
+                    <input type="radio" class="cryptButton" name="cifra" value = "1" checked>
                     <label for="cryptButton">Codificar</label>
-                    <input type="radio" value="Decodificar" class="decryptButton">
+                    <input type="radio" class="decryptButton" name="cifra" value = "2">
                     <label for="cryptButton">Decodificar</label>
                 </div>
 
                 <div class="options">
-                    <select>
-                        <option value="cifra">Cifra de Cesar</option>
-                        <option value="base64">Base 64</option>
+                    <select id="options">
+                        <option value='0' selected>Cifra de Cesar</option>
+                        <option value='1'>Base 64</option>
                     </select>
                 </div>
                     
