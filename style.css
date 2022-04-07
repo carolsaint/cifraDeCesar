@@ -31,7 +31,7 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 7px;
-    background-image: url(/bg.jpg);
+    background-image: url(./bg.jpg);
     color: var(--original-text);
 }
 
