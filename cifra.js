@@ -19,7 +19,6 @@ function criptografar(texto){
     textoCriptografado += alphabet[indice];
   }
 }
-console.log(textoCriptografado);
 return textoCriptografado
 }
 
@@ -35,12 +34,14 @@ function decriptografar(texto){
   if (letra === " ") {
     textoDecriptografado += letra;
   } else {
-    var indice = parseInt(letra.charCodeAt() - 97 + shift * -1);
-    if (indice > 25) {
-        var help = parseInt(indice / 26);
-      indice = indice - (help * 26);
+    var indice = parseInt(letra.charCodeAt() - 97 - (shift % 26));
+    console.log(indice)
+    if (indice < 0) {
+      indice += 26;
+      console.log(indice)
     }
     textoDecriptografado += alphabet[indice];
+    console.log(textoDecriptografado)
   }
 }
 console.log(textoDecriptografado);
