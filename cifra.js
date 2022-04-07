@@ -55,18 +55,21 @@ document.querySelector('#container').addEventListener('submit', function(event){
     event.preventDefault();
 }) 
 
+var selecao = document.querySelector("#options");
+selecao.addEventListener("change", function(){
+    if(selecao.value == "0"){
+      var shift = document.querySelector('.shift').style.visibility = "visible";
+    }else{
+      var shift = document.querySelector('.shift').style.visibility = "hidden";
 
+    }
+})
 
 function submit(){
   var texto = document.getElementById('textInput').value.toLowerCase();
   var opt1 = document.querySelector('input[name="cifra"]:checked').value;
   var output = document.querySelector('.textOutput')
 
-  // if (selecao == "0"){
-  //   var texto = document.getElementById('textInput').value.toLowerCase();
-  // }else{
-  //   var texto = document.getElementById('textInput').value;
-  // }
 
   var selecao = document.querySelector("#options").value;
   if(selecao == "0"){
